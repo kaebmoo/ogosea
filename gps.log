@@ -1,0 +1,428 @@
+SODAQ LoRaONE test_gps is starting ...
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6121ms
+ datetime = 20190106040835
+ lat = 16.8270955
+ lon = 99.7937174
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 11940ms
+ datetime = 20190106040937
+ lat = 16.8272380
+ lon = 99.7938802
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5937ms
+ datetime = 20190106041031
+ lat = 16.8274129
+ lon = 99.7936849
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 7926ms
+ datetime = 20190106041133
+ lat = 16.8275716
+ lon = 99.7940918
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5912ms
+ datetime = 20190106041231
+ lat = 16.8274353
+ lon = 99.7946289
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 54894ms
+ datetime = 20190106041420
+ lat = 16.8269857
+ lon = 99.7941569
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4892ms
+ datetime = 20190106041430
+ lat = 16.8269775
+ lon = 99.7941895
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 1917ms
+ datetime = 20190106041527
+ lat = 16.8269206
+ lon = 99.7942871
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 15935ms
+ datetime = 20190106041641
+ lat = 16.8271790
+ lon = 99.7940104
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 9947ms
+ datetime = 20190106041735
+ lat = 16.8268473
+ lon = 99.7941569
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 7969ms
+ datetime = 20190106041833
+ lat = 16.8269958
+ lon = 99.7943034
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4008ms
+ datetime = 20190106041929
+ lat = 16.8270142
+ lon = 99.7943197
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5045ms
+ datetime = 20190106042030
+ lat = 16.8270508
+ lon = 99.7942383
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6089ms
+ datetime = 20190106042131
+ lat = 16.8269714
+ lon = 99.7941895
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6129ms
+ datetime = 20190106042231
+ lat = 16.8269816
+ lon = 99.7942708
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5176ms
+ datetime = 20190106042330
+ lat = 16.8270671
+ lon = 99.7941569
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 9224ms
+ datetime = 20190106042434
+ lat = 16.8269592
+ lon = 99.7942220
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 26282ms
+ datetime = 20190106042551
+ lat = 16.8271749
+ lon = 99.7942708
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6317ms
+ datetime = 20190106042631
+ lat = 16.8269084
+ lon = 99.7941081
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 3368ms
+ datetime = 20190106042728
+ lat = 16.8268229
+ lon = 99.7941732
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 76702ms
+ datetime = 20190106043541
+ lat = 16.8269755
+ lon = 99.7941406
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 13201ms
+ datetime = 20190106043555
+ lat = 16.8269409
+ lon = 99.7940104
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8233ms
+ datetime = 20190106043650
+ lat = 16.8269348
+ lon = 99.7941243
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 13265ms
+ datetime = 20190106043755
+ lat = 16.8269958
+ lon = 99.7942708
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 10278ms
+ datetime = 20190106043852
+ lat = 16.8269958
+ lon = 99.7942383
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 14300ms
+ datetime = 20190106043956
+ lat = 16.8270325
+ lon = 99.7942708
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 16320ms
+ datetime = 20190106044058
+ lat = 16.8270406
+ lon = 99.7943034
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 11343ms
+ datetime = 20190106044153
+ lat = 16.8270365
+ lon = 99.7942220
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 33366ms
+ datetime = 20190106044315
+ lat = 16.8268717
+ lon = 99.7942220
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 14387ms
+ datetime = 20190106044356
+ lat = 16.8269877
+ lon = 99.7941569
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6407ms
+ datetime = 20190106044448
+ lat = 16.8269572
+ lon = 99.7942220
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8432ms
+ datetime = 20190106044550
+ lat = 16.8269307
+ lon = 99.7943197
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5457ms
+ datetime = 20190106044647
+ lat = 16.8269023
+ lon = 99.7942220
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6502ms
+ datetime = 20190106044748
+ lat = 16.8269511
+ lon = 99.7942871
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 17566ms
+ datetime = 20190106044859
+ lat = 16.8267761
+ lon = 99.7943034
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4589ms
+ datetime = 20190106044946
+ lat = 16.8269043
+ lon = 99.7942546
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4604ms
+ datetime = 20190106045046
+ lat = 16.8268778
+ lon = 99.7943522
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6619ms
+ datetime = 20190106045148
+ lat = 16.8268860
+ lon = 99.7942708
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5634ms
+ datetime = 20190106045247
+ lat = 16.8268453
+ lon = 99.7942871
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 14641ms
+ datetime = 20190106045356
+ lat = 16.8266479
+ lon = 99.7945313
+ num sats = 3
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 5648ms
+ datetime = 20190106045447
+ lat = 16.8269938
+ lon = 99.7943197
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6651ms
+ datetime = 20190106045548
+ lat = 16.8268392
+ lon = 99.7943522
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 2662ms
+ datetime = 20190106045644
+ lat = 16.8269653
+ lon = 99.7941895
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8672ms
+ datetime = 20190106045750
+ lat = 16.8267415
+ lon = 99.7941406
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4682ms
+ datetime = 20190106045846
+ lat = 16.8268860
+ lon = 99.7942220
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8691ms
+ datetime = 20190106045950
+ lat = 16.8269857
+ lon = 99.7943522
+ num sats = 4
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 19697ms
+ datetime = 20190106050101
+ lat = 16.8267863
+ lon = 99.7943685
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 38730ms
+ datetime = 20190106050220
+ lat = 16.8270528
+ lon = 99.7942383
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8711ms
+ datetime = 20190106050250
+ lat = 16.8270081
+ lon = 99.7942871
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4725ms
+ datetime = 20190106050346
+ lat = 16.8269287
+ lon = 99.7941895
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 9734ms
+ datetime = 20190106050451
+ lat = 16.8269552
+ lon = 99.7942871
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 8750ms
+ datetime = 20190106050550
+ lat = 16.8268697
+ lon = 99.7942871
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 6766ms
+ datetime = 20190106050648
+ lat = 16.8268962
+ lon = 99.7943522
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4782ms
+ datetime = 20190106050746
+ lat = 16.8269816
+ lon = 99.7943034
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 7794ms
+ datetime = 20190106050849
+ lat = 16.8271505
+ lon = 99.7942871
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 3810ms
+ datetime = 20190106050945
+ lat = 16.8270447
+ lon = 99.7943522
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4821ms
+ datetime = 20190106051046
+ lat = 16.8269958
+ lon = 99.7943522
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 4827ms
+ datetime = 20190106051146
+ lat = 16.8270223
+ lon = 99.7942871
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 2844ms
+ datetime = 20190106051244
+ lat = 16.8269348
+ lon = 99.7942708
+ num sats = 6
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 3853ms
+ datetime = 20190106051345
+ lat = 16.8270711
+ lon = 99.7942708
+ num sats = 5
+delay ... 0ms
+waiting for fix ..., timeout=900000ms
+ time to find fix: 3870ms
+ datetime = 20190106051445
+ lat = 16.8271322
+ lon = 99.7944336
+ num sats = 5
