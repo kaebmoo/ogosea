@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "vessel tracking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "vessel",
+    "tracking"
+  ],
+  "author": "kaebmoo@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

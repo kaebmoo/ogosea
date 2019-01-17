@@ -13,6 +13,11 @@ from network import LoRa
 import socket
 import ubinascii
 import struct
+import socket
+import binascii
+import pycom
+from CayenneLPP import CayenneLPP
+from LIS2HH12 import LIS2HH12
 
 time.sleep(2)
 gc.enable()
@@ -27,6 +32,7 @@ print('Adjusted from UTC to EST timezone', utime.localtime(), '\n')
 
 py = Pytrack()
 l76 = L76GNSS(py, timeout=30)
+li = LIS2HH12(py)
 
 # sd = SD()
 # os.mount(sd, '/sd')
@@ -47,6 +53,12 @@ app_swkey = ubinascii.unhexlify('1628AE2B7E15D2A6ABF7CF4F3C158809')
 
 # join a network using ABP (Activation By Personalization)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
+# wait until the module has joined the network
+while not lora.has_joined():
+    time.sleep(2.5)
+    print('Not yet joined...')
+    time.sleep(1.0)
+    
 
 # create a LoRa socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
@@ -59,7 +71,16 @@ s.setsockopt(socket.SOL_LORA, socket.SO_DR, 5)
 s.setblocking(True)
 
 while (True):
+    lpp = CayenneLPP()
+    print('\n\n** 3-Axis Accelerometer (LIS2HH12)')
+    print('Acceleration', li.acceleration())
+    print('Roll', li.roll())
+    print('Pitch', li.pitch())
+    lpp.add_accelerometer(1, li.acceleration()[0], li.acceleration()[1], li.acceleration()[2])
+    lpp.add_gryrometer(1, li.roll(), li.pitch(), 0)
+
     coord = l76.coordinates()
+
     #f.write("{} - {}\n".format(coord, rtc.now()))
     print("{} - {} - {}".format(coord, rtc.now(), gc.mem_free()))
 
@@ -71,6 +92,7 @@ while (True):
     else:
         lat_d = str(coord[0])
         lon_d = str(coord[1])
+        lpp.add_gps(1, coord[0], coord[1], 0)
 
     # send some data
     # s.send(bytes([0x03]))
@@ -78,10 +100,12 @@ while (True):
     # s.send(bytes([0x04]))
     # s.send(bytes([lon_d]))
     # data = "{ \"api_key\": \"TC7PKSGHP4JIBUMM\"," + "\"field1\":"  + lat_d + "," + "\"field2\":"  + lon_d + "}"
-    data = '{ "api_key": "TC7PKSGHP4JIBUMM",' + '"field1":'  + lat_d + ',' + '"field2":'  + lon_d + '}'
-    print(data)
-    s.send(data)
+    # data = '{ "api_key": "TC7PKSGHP4JIBUMM",' + '"field1":'  + lat_d + ',' + '"field2":'  + lon_d + '}'
+    # print(data)
+    # s.send(data)
 
+    print('Sending data (uplink)...')
+    s.send(bytes(lpp.get_buffer()))
 
     # make the socket non-blocking
     # (because if there's no data received it will block forever...)
