@@ -78,7 +78,8 @@ while (True):
     # s.send(bytes([0x04]))
     # s.send(bytes([lon_d]))
     # data = "{ \"api_key\": \"TC7PKSGHP4JIBUMM\"," + "\"field1\":"  + lat_d + "," + "\"field2\":"  + lon_d + "}"
-    data = '{ "api_key": "TC7PKSGHP4JIBUMM",' + '"field1":'  + lat_d + ',' + '"field2":'  + lon_d + '}'
+    # data = '{ "api_key": "TC7PKSGHP4JIBUMM",' + '"field1":'  + lat_d + ',' + '"field2":'  + lon_d + '}'
+     
     print(data)
     s.send(data)
 

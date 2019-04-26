@@ -10,6 +10,7 @@ from machine import SD
 from L76GNSS import L76GNSS
 from pytrack import Pytrack
 from network import LoRa
+from network import WLAN
 import socket
 import ubinascii
 import struct
@@ -19,8 +20,17 @@ import pycom
 from CayenneLPP import CayenneLPP
 from LIS2HH12 import LIS2HH12
 
+print('Pytrack: ogosea version 0.1 by kaebmoo@gmail.com')
 time.sleep(2)
 gc.enable()
+
+# configure the WLAN subsystem in station mode (the default is AP)
+#wlan = WLAN(mode=WLAN.STA)
+#wlan.scan()     # scan for available networks
+#wlan.connect(ssid='Red', auth=(WLAN.WPA2, '12345678'))
+#while not wlan.isconnected():
+#    pass
+# print(wlan.ifconfig())
 
 # setup rtc
 rtc = machine.RTC()
@@ -58,7 +68,7 @@ while not lora.has_joined():
     time.sleep(2.5)
     print('Not yet joined...')
     time.sleep(1.0)
-    
+
 
 # create a LoRa socket
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
@@ -115,4 +125,4 @@ while (True):
     data = s.recv(64)
     print(data)
     print(lora.stats())
-    time.sleep(15)
+    time.sleep(30)
