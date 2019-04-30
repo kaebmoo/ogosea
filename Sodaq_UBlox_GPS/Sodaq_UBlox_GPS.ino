@@ -30,7 +30,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
 #include <Arduino.h>
 #include <Sodaq_UBlox_GPS.h>
-
+#include <Wire.h>
+#include <Sodaq_RN2483.h>
+#include "Timer.h"
+#include <Sodaq_wdt.h>
 
 #define ADC_AREF 3.3f
 // #define BATVOLT_R1 2.0f // One v1
