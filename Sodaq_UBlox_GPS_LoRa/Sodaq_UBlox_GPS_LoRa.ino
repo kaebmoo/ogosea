@@ -216,10 +216,14 @@ void setup()
     SerialUSB.println(getBatteryVoltage());
     // First time finding a fix
     // find_fix(0);
+
     
-    scanGPS();
     sendData();
-    timerSendData.every(60000, sendData);
+    timerSendData.every(300000, sendData);
+
+    // Sleep sketch startup delay
+    delay(10000);
+    // initRtc();
 }
 
 void loop()
@@ -246,7 +250,7 @@ void loop()
         now = millis();
         read_AccMeter();
     }
-    
+    // systemSleep();
     timerSendData.update();
 }
 
@@ -356,6 +360,7 @@ void sendPacket() // String packet
   switch (LoRaBee.sendReqAck(1, lpp.getBuffer(), lpp.getSize(), 10))
     {
     case NoError:  
+      GREEN();
       debugSerial.println("Successful transmission.");
       break;
     case NoResponse:
@@ -434,6 +439,7 @@ void sendData()
 {
   String packet;
 
+  read_AccMeter();
   scanGPS();
   lpp.reset();
   lpp.addAnalogInput(3, (float) getBatteryVoltage()/1000);
@@ -469,8 +475,12 @@ void initRtc()
     // Attach handler
     rtc.attachInterrupt(rtcAlarmHandler);
 
+
+    // Set sleep mode
+    SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+
     // This sets it to 2000-01-01
-    rtc.setEpoch(0);
+    // rtc.setEpoch(0);
 }
 
 /**
@@ -480,6 +490,13 @@ void rtcAlarmHandler()
 {
   debugSerial.println("RTC Alarm Handler.");  
   minuteFlag = true;
+  digitalWrite(LED_GREEN, LOW);
+  delayMicroseconds(500000);
+  digitalWrite(LED_GREEN, HIGH);
+  sendData();
+  digitalWrite(LED_RED, LOW);
+  delayMicroseconds(500000);
+  digitalWrite(LED_RED, HIGH);
 }
 
 /**
@@ -492,8 +509,34 @@ void systemSleep()
 
     debugSerial.println("Turn LED Off.");    
     LEDOFF();
-    // setGpsActive(false); // explicitly disable after resetting the pins
 
+    
+      // Disable USB
+      USBDevice.detach();
+
+      Serial.println("going to sleep");
+      //Enter sleep mode
+      // SAMD sleep
+      __WFI();
+      // ...Sleep
+  
+      // Enable USB and wait for resume if attached
+      USBDevice.attach();
+      USB->DEVICE.CTRLB.bit.UPRSM = 0x01u;
+      while (USB->DEVICE.CTRLB.bit.UPRSM);
+    
+      
+    // Enable USB
+    USB->DEVICE.CTRLA.reg |= USB_CTRLA_ENABLE;
+  
+    Serial.println("awake");
+    // Stay awake for two seconds
+    delay(2000);
+
+    /*
+    // setGpsActive(false); // explicitly disable after resetting the pins
+    
+    
     // go to sleep, unless USB is used for debugging
     if (!_isDebugOn || ((long)&DEBUG_STREAM != (long)&SerialUSB)) {
         noInterrupts();
@@ -504,6 +547,8 @@ void systemSleep()
         }
         interrupts();
     }
+    */
+    
 }
 
 void read_AccMeter()
